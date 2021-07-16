@@ -9,6 +9,7 @@
 - [常量](notes/Java/Java入门/常量/常量.md)
 - [基本数据类型](notes/Java/Java入门/基本数据类型/基本数据类型.md)
 - [变量](notes/Java/Java入门/变量/变量.md)
+- [数据类型转换](notes/Java/Java入门/数据类型转换/数据类型转换.md)
 - [运算符与表达式](notes/Java/Java入门/运算符与表达式/运算符与表达式.md)
 - [常用类](notes/Java/Java入门/常用类/常用类.md)
 - [面向对象](notes/Java/Java入门/面向对象/面向对象.md)
