@@ -15,6 +15,8 @@
     - [创建测试计划](notes/Jmeter/创建测试计划/创建测试计划.md)
   * [Selenium](notes/Selenium/README.md)
     - [安装Selenium](notes/Selenium/安装Selenium/安装Selenium.md)
+    - [加载WebDriver](notes/Selenium/加载WebDriver/加载WebDriver.md)
+    - [元素定位](notes/Selenium/元素定位/元素定位.md)
 
 **前端**
   * [Vue](notes/Vue/README.md)
