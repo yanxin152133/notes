@@ -8,7 +8,7 @@
         <variables>
             <custom-favicons>my-logo.png</custom-favicons>
             <header-logo>my-logo.png</header-logo>
-            <noindex-content>true</noindex-content>
+            <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
 
