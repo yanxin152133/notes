@@ -4,8 +4,7 @@
 
 <instance-profile id="n"
                  name="notes"
-                 start-page="Section-Starting-Page.topic">
+                 start-page="Home.topic">
 
-    <toc-element topic="starter-topic.md"/>
-    <toc-element topic="Section-Starting-Page.topic"/>
+    <toc-element topic="Home.topic"/>
 </instance-profile>
