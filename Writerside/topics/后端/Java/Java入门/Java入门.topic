@@ -7,7 +7,7 @@
 
     <section-starting-page>
         <misc>
-            <links narrow="true">
+            <links>
                 <group>
                     <a href="计算机基础知识.md"/>
                     <a href="简介.md"/>

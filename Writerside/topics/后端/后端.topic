@@ -3,11 +3,11 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Java" id="Java">
+       title="后端" id="后端">
 
     <section-starting-page>
         <misc>
-            <links narrow="true">
+            <links>
                 <group>
                     <a href="Java入门.topic"/>
                     <a href="Spring-Boot.topic"/>
