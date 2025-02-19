@@ -20,13 +20,12 @@
             <links narrow="true">
                 <group>
                     <title>待办事项</title>
-                    <a href="Java.topic" summary="Java"/>
                     <a href="" summary="Python">Python</a>
                     <a href="" summary="Vue">Vue</a>
                 </group>
                 <group>
                     <title>已办事项</title>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
+                    <a href="Java.topic" summary="Java"/>
                 </group>
             </links>
         </misc>
