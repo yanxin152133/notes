@@ -20,7 +20,7 @@
             <links narrow="true">
                 <group>
                     <title>待办事项</title>
-                    <a href="" summary="Java">Java</a>
+                    <a href="Java.topic" summary="Java"/>
                     <a href="" summary="Python">Python</a>
                     <a href="" summary="Vue">Vue</a>
                 </group>
