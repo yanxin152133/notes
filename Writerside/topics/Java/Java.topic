@@ -5,5 +5,14 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Java" id="Java">
 
-    <p>Start typing here...</p>
+    <section-starting-page>
+        <misc>
+            <links narrow="true">
+                <group>
+                    <a href="Java入门.topic"/>
+                    <a href="Spring-Boot.topic"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
 </topic>
