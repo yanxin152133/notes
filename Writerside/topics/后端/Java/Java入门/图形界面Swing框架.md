@@ -1,10 +1,13 @@
 # Java图形界面Swing框架
+
 ## Swing简介
+
 1. Swing是Java的一个图形框架，继承自AWT；
 2. Swing主要涉及到容器，组件，还有布局管理器；
 3. Swing与用户交互的时候还涉及到事件概念
 
 ## JFrame容器
+
 1. public void setVisible(boolean b):根据参数b的值显示或隐藏此窗体
 
 2. public void setSize(int width,int height):调整组件的大小，使其宽度为width，高度为height
@@ -75,6 +78,7 @@ public class JButtonTest {
 ```
 
 ## Swing布局管理器
+
 1. FlowLayout流式布局
    使用此种布局方式会使所有的组件像流水一样依次进行排列
 
@@ -262,6 +266,7 @@ public class JLableTest {
 ```
 
 ## 文本框组件
+
 1. JTextField 文本框
 
 代码示例：
@@ -369,6 +374,7 @@ public class JTextAreaTest {
 ```
 
 ## JPanel 轻量级容器
+
 代码示例：
 
 ```java

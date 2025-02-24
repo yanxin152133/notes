@@ -39,4 +39,16 @@
             <toc-element topic="Spring-Boot.topic"/>
         </toc-element>
     </toc-element>
+	<toc-element topic="版本控制工具.topic">
+        <toc-element topic="Git.topic">
+            <toc-element topic="Git简介.md"/>
+            <toc-element topic="初始设置.md"/>
+            <toc-element topic="创建仓库.md"/>
+            <toc-element topic="远程仓库.md"/>
+            <toc-element topic="分支.md"/>
+            <toc-element topic="版本回退.md"/>
+            <toc-element topic="标签.md"/>
+            <toc-element topic="查看提交历史.md"/>
+        </toc-element>
+    </toc-element>
 </instance-profile>

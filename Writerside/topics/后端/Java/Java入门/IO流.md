@@ -1,14 +1,17 @@
 # Java IO流
+
 ## IO流简介
+
 流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据再两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。
 
 ![](https://live.staticflickr.com/65535/48411733786_ac1f14f1b1_b.jpg)
 
->IO 流的分类
-根据处理数据类型的不同分类：字符流和字节流
-根据数据流向不同分为：输入流和输出流
+> IO 流的分类
+> 根据处理数据类型的不同分类：字符流和字节流
+> 根据数据流向不同分为：输入流和输出流
 
 ## 文件操作File类
+
 1. public boolean mkdir()：创建此抽象路径名指定的目录
 2. public boolean createNewFile():创建一个文件
 3. public boolean delete():删除此抽象路径名表示的文件或目录。如果此路径名表示一个目录，则该目录必须为空才能删除
@@ -153,11 +156,13 @@ public class Demo4 {
 ```
 
 ## 字节输入，输出流
+
 1. InputStream 读取文件
 
 代码示例：
 
 **Demo1.java**
+
 ```java
 package com.java.chap14.sec03;
 
@@ -245,7 +250,6 @@ public class Demo3 {
 }
 
 ```
-
 
 2. OutputStream 写入文件
 
@@ -367,14 +371,17 @@ public class Demo6 {
 }
 
 ```
+
 4. 缓冲和非缓冲的区别及性能对比
 
 ## 字符输入、输出流
+
 1. Reader读取文件
 
 代码示例：
 
 **Demo1.java**
+
 ```java
 package com.java.chap14.sec04;
 
@@ -434,6 +441,7 @@ public class Demo2 {
 代码示例：
 
 **Demo3.java**
+
 ```java
 package com.java.chap14.sec04;
 
