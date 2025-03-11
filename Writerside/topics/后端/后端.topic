@@ -10,6 +10,7 @@
 			<links>
 				<group>
 					<a href="Java入门.topic"/>
+					<a href="Python.topic"/>
 					<a href="Spring-Boot.topic"/>
 				</group>
 			</links>

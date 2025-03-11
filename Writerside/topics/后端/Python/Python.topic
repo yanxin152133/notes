@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Python" id="Python">
+
+    <section-starting-page>
+        <misc>
+            <links>
+                <group>
+                    <a href="python搭建环境.md"/>
+                    <a href="pip.md"/>
+                    <a href="python解释器.md"/>
+                    <a href="python基础知识.md"/>
+                    <a href="python数据类型.md"/>
+                    <a href="python流程控制.md"/>
+                    <a href="python函数.md"/>
+                    <a href="python内置函数.md"/>
+                    <a href="python文件读写.md"/>
+                    <a href="python面向对象.md"/>
+                    <a href="python日期和时间.md"/>
+                    <a href="python模块.md"/>
+                    <a href="python异常处理.md"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
+</topic>
