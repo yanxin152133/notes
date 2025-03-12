@@ -67,4 +67,11 @@
             <toc-element topic="查看提交历史.md"/>
         </toc-element>
     </toc-element>
+    <toc-element topic="DevOps.topic">
+        <toc-element topic="Kubernetes.topic"/>
+        <toc-element topic="Docker.topic"/>
+        <toc-element topic="CI-CD.topic">
+            <toc-element topic="Jenkins.topic"/>
+        </toc-element>
+    </toc-element>
 </instance-profile>
