@@ -73,7 +73,10 @@
             <toc-element topic="Docker安装.md"/>
         </toc-element>
         <toc-element topic="CI-CD.topic">
-            <toc-element topic="Jenkins.topic"/>
+            <toc-element topic="Jenkins.topic">
+                <toc-element topic="Jenkins搭建环境.md"/>
+                <toc-element topic="Jenkins流水线语法.md"/>
+            </toc-element>
         </toc-element>
     </toc-element>
 </instance-profile>
