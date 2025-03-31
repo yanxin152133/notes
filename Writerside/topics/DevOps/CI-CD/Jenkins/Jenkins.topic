@@ -5,5 +5,14 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Jenkins" id="Jenkins">
 
-    <p>Start typing here...</p>
+    <section-starting-page>
+        <misc>
+            <links>
+                <group>
+                    <a href="Jenkins搭建环境.md"/>
+                    <a href="Jenkins流水线语法.md"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
 </topic>
