@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="n"
+                 name="我的笔记"
+                 start-page="Home.topic">
+
+    <toc-element topic="Home.topic"/>
+    <toc-element topic="后端.topic">
+        <toc-element topic="Java.topic">
+            <toc-element topic="Java入门.topic">
+                <toc-element topic="计算机基础知识.md"/>
+                <toc-element topic="简介.md"/>
+                <toc-element topic="Java环境搭建.md"/>
+                <toc-element topic="工具.md"/>
+                <toc-element topic="helloWorld.md"/>
+                <toc-element topic="Java-程序基本结构.md"/>
+                <toc-element topic="Java注释、标识符命名规则及Java中的关键字.md"/>
+                <toc-element topic="Java常量.md"/>
+                <toc-element topic="Java数据类型.md"/>
+                <toc-element topic="Java变量.md"/>
+                <toc-element topic="Java运算符与表达式.md"/>
+                <toc-element topic="Java数据类型转换.md"/>
+                <toc-element topic="ASCII码表.md"/>
+                <toc-element topic="Java方法.md"/>
+                <toc-element topic="Java流程控制.md"/>
+                <toc-element topic="Java常用类.md"/>
+                <toc-element topic="Java面向对象.md"/>
+                <toc-element topic="Java集合.md"/>
+                <toc-element topic="Java数组.md"/>
+                <toc-element topic="IO流.md"/>
+                <toc-element topic="Java多线程.md"/>
+                <toc-element topic="Java泛型.md"/>
+                <toc-element topic="Java异常处理.md"/>
+                <toc-element topic="Java图形界面Swing框架.md"/>
+                <toc-element topic="参考.md"/>
+            </toc-element>
+            <toc-element topic="Spring-Boot.topic"/>
+        </toc-element>
+        <toc-element topic="Python.topic">
+            <toc-element topic="python搭建环境.md"/>
+            <toc-element topic="pip.md"/>
+            <toc-element topic="python解释器.md"/>
+            <toc-element topic="python基础知识.md"/>
+            <toc-element topic="python数据类型.md"/>
+            <toc-element topic="python流程控制.md"/>
+            <toc-element topic="python函数.md"/>
+            <toc-element topic="python内置函数.md"/>
+            <toc-element topic="python文件读写.md"/>
+            <toc-element topic="python面向对象.md"/>
+            <toc-element topic="python日期和时间.md"/>
+            <toc-element topic="python模块.md"/>
+            <toc-element topic="python异常处理.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="前端.topic"/>
+    <toc-element topic="版本控制工具.topic">
+        <toc-element topic="Git.topic">
+            <toc-element topic="Git简介.md"/>
+            <toc-element topic="初始设置.md"/>
+            <toc-element topic="创建仓库.md"/>
+            <toc-element topic="远程仓库.md"/>
+            <toc-element topic="分支.md"/>
+            <toc-element topic="版本回退.md"/>
+            <toc-element topic="标签.md"/>
+            <toc-element topic="查看提交历史.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="DevOps.topic">
+        <toc-element topic="Kubernetes.topic"/>
+        <toc-element topic="Docker.topic">
+            <toc-element topic="Docker安装.md"/>
+        </toc-element>
+        <toc-element topic="CI-CD.topic">
+            <toc-element topic="Jenkins.topic">
+                <toc-element topic="Jenkins搭建环境.md"/>
+                <toc-element topic="Jenkins流水线语法.md"/>
+            </toc-element>
+        </toc-element>
+    </toc-element>
+</instance-profile>
