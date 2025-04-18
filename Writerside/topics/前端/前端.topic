@@ -5,5 +5,13 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="前端" id="前端">
 
-    <p>Start typing here...</p>
+    <section-starting-page>
+        <misc>
+            <links>
+                <group>
+                    <a href="Vue.topic"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
 </topic>

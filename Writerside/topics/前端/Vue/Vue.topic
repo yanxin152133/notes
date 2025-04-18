@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Vue" id="Vue">
+
+    <section-starting-page>
+        <misc>
+            <links>
+                <group>
+                    <a href="Vue-CLI介绍.md"/>
+                    <a href="安装Vue-cli.md"/>
+                    <a href="创建项目.md"/>
+                    <a href="项目结构.md"/>
+                    <a href="模板语法.md"/>
+                    <a href="条件渲染.md"/>
+                    <a href="列表渲染.md"/>
+                    <a href="事件处理.md"/>
+                    <a href="表单输入绑定.md"/>
+                    <a href="生命周期钩子.md"/>
+                    <a href="侦听器.md"/>
+                    <a href="生产部署.md"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
+</topic>
