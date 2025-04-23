@@ -10,6 +10,7 @@
             <links>
                 <group>
                     <a href="TypeScript简介.md"/>
+                    <a href="安装TypeScript.md"/>
                 </group>
             </links>
         </misc>
