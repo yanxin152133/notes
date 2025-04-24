@@ -11,6 +11,8 @@
                 <group>
                     <a href="TypeScript简介.md"/>
                     <a href="安装TypeScript.md"/>
+                    <a href="原始数据类型.md"/>
+                    <a href="any 类型，unknown 类型，never 类型.md"/>
                 </group>
             </links>
         </misc>
