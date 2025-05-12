@@ -19,4 +19,7 @@
 ![image5.png](./image5.png){ thumbnail="true" }
 
 ### 使用 client_secret 请求访问令牌
+![image6.png](./image6.png){ thumbnail="true" }
 
+- code 为`请求授权代码`中的`浏览器请求url` 取值。
+![image5.png](./image5.png){ thumbnail="true" }
