@@ -95,6 +95,7 @@
     <toc-element topic="DevOps.topic">
         <toc-element topic="Kubernetes.topic">
             <toc-element topic="Kubernetes搭建高可用环境.md"/>
+            <toc-element topic="Kubernetes搭建单机环境.md"/>
         </toc-element>
         <toc-element topic="Docker.topic">
             <toc-element topic="Docker安装.md"/>
