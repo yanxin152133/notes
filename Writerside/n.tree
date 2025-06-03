@@ -90,6 +90,7 @@
             <toc-element topic="版本回退.md"/>
             <toc-element topic="标签.md"/>
             <toc-element topic="查看提交历史.md"/>
+            <toc-element topic="忽略规则文件.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="DevOps.topic">
