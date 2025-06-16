@@ -79,6 +79,9 @@
             <toc-element topic="any 类型，unknown 类型，never 类型.md"/>
             <toc-element topic="TypeScript-变量声明.md"/>
         </toc-element>
+        <toc-element topic="JavaScript.topic">
+            <toc-element topic="JavaScript简介.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="版本控制工具.topic">
         <toc-element topic="Git.topic">

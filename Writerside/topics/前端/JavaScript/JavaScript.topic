@@ -3,15 +3,13 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="前端" id="前端">
+       title="JavaScript" id="JavaScript">
 
     <section-starting-page>
         <misc>
             <links>
                 <group>
-                    <a href="Vue.topic"/>
-                    <a href="TypeScript.topic"/>
-                    <a href="JavaScript.topic"/>
+                    <a href="JavaScript简介.md"/>
                 </group>
             </links>ß
         </misc>
