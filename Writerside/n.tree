@@ -81,6 +81,7 @@
         </toc-element>
         <toc-element topic="JavaScript.topic">
             <toc-element topic="JavaScript简介.md"/>
+            <toc-element topic="JavaScript基本语法.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="版本控制工具.topic">
