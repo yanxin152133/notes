@@ -11,8 +11,10 @@
                 <group>
                     <a href="JavaScript简介.md"/>
                     <a href="JavaScript基本语法.md"/>
+                    <a href="JavaScript数据类型.md"/>
                 </group>
-            </links>ß
+            </links>
+            ß
         </misc>
     </section-starting-page>
 </topic>
