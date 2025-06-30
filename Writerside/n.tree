@@ -88,6 +88,7 @@
     <toc-element topic="数据库.topic">
         <toc-element topic="MySql.topic">
             <toc-element topic="MySql简介.md"/>
+            <toc-element topic="MySql连接.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="版本控制工具.topic">

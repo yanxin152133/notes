@@ -10,6 +10,7 @@
             <links>
                 <group>
                     <a href="MySql简介.md"/>
+                    <a href="MySql连接.md"/>
                 </group>
             </links>
         </misc>
