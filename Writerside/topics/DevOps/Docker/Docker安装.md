@@ -52,7 +52,11 @@ sudo service docker restart
 newgrp - docker
 ```
 
-## 更换国内Docker仓库
+## 更换第三方源和设置DNS
+加速镜像：
+- https://github.com/dongyubin/DockerHub
+- https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6
+
 创建文件：
 
 ```bash
@@ -64,7 +68,11 @@ sudo vim /etc/docker/daemon.json
 ```json
 {
   "registry-mirrors": [
-    "https://docker.mirrors.ustc.edu.cn"
+    "https://docker.1ms.run"
+  ],
+  "dns" : [
+    "119.29.29.29",
+    "8.8.8.8"
   ]
 }
 ```
@@ -72,6 +80,8 @@ sudo vim /etc/docker/daemon.json
 然后重启Docker。
 
 ## 设置socks5
+参考链接：https://docs.docker.com/engine/daemon/proxy/
+
 新建文件`/etc/systemd/system/docker.service.d/proxy.conf`：
 
 ```conf
