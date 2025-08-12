@@ -11,6 +11,7 @@
                 <group>
                     <a href="Kubernetes搭建高可用环境.md"/>
                     <a href="Kubernetes搭建单机环境.md"/>
+                    <a href="命令行工具-kubectl.md"/>
                 </group>
             </links>
         </misc>
