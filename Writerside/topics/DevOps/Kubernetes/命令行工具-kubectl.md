@@ -59,4 +59,5 @@ kubectl [command] [TYPE] [NAME] [flags]
 - command：指定要对一个或多个资源执行的操作，例如 create、get、describe、delete。
 - TYPE：指定资源类型。资源类型不区分大小写， 可以指定单数、复数或缩写形式。
 - NAME：指定资源的名称。名称区分大小写。 如果省略名称，则显示所有资源的详细信息。
-- flags：指定可选的参数。例如，可以使用 -s 或 --server 参数指定 Kubernetes API 服务器的地址和端口。## Kubectl命令
+- flags：指定可选的参数。例如，可以使用 -s 或 --server 参数指定 Kubernetes API 服务器的地址和端口。
+
