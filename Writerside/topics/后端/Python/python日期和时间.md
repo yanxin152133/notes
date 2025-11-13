@@ -1,9 +1,11 @@
 # python日期和时间
+
 python 中 time和calsendar模块用于格式化日期和时间。    
 时间间隔是以秒为单位的浮点小数。    
 每个时间戳都以自从1970年1月1日午夜（历元）经过了多长时间来表示。
 
 ## 获取时间
+
 ```python
 import time
  
@@ -12,7 +14,9 @@ print "本地时间为 :", localtime
 ```
 
 ## 获取格式化时间
+
 最简单的获取可读的时间模式的函数是`asctime()`:
+
 ```python
 import time
  
@@ -21,6 +25,7 @@ print "本地时间为 :", localtime
 ```
 
 ## 格式化日期
+
 ```python
 import time
  
@@ -36,6 +41,7 @@ print time.mktime(time.strptime(a,"%a %b %d %H:%M:%S %Y"))
 ```
 
 python中时间日期格式化符号：
+
 - %y 两位数的年份表示（00-99）
 - %Y 四位数的年份表示（000-9999）
 - %m 月份（01-12）
@@ -60,6 +66,7 @@ python中时间日期格式化符号：
 - %% %号本身
 
 ## 获取某月日历
+
 ```python
 cal = calendar.month(2016, 1)
 print "以下输出2016年1月份的日历:"

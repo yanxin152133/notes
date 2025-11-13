@@ -1,5 +1,6 @@
 # python内置函数
-|               |             | 内置函数     |              |                  |
+
+|               |             | 内置函数         |              |                  |
 |---------------|-------------|--------------|--------------|------------------|
 | abs()         | divmod()    | input()      | open()       | staticmethod()   |
 | all()         | enumerate() | int()        | ord()        | str()            |
@@ -16,4 +17,4 @@
 | complex()     | hash()      | min()        | set()        |                  |
 | delattr()     | help()      | next()       | setattr()    |                  |
 | dict()        | hex()       | object()     | slice()      |                  |
-| dir()         | id()        | oct()        | sorted()     | exec 内置表达式  |
+| dir()         | id()        | oct()        | sorted()     | exec 内置表达式       |

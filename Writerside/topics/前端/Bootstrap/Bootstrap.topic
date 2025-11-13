@@ -9,9 +9,7 @@
         <misc>
             <links>
                 <group>
-                    <a href="JavaScript简介.md"/>
-                    <a href="JavaScript基本语法.md"/>
-                    <a href="JavaScript数据类型.md"/>
+                    <a href="Bootstrap简介与快速部署.md"/>
                 </group>
             </links>
         </misc>

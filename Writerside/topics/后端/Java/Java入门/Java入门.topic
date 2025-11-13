@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic
-		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-	   title="Java入门" id="Java入门">
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Java入门" id="Java入门">
 
-	<section-starting-page>
-		<misc>
-			<links>
-				<group>
-					<a href="计算机基础知识.md"/>
-					<a href="简介.md"/>
-					<a href="Java环境搭建.md"/>
-					<a href="工具.md"/>
-					<a href="helloWorld.md"/>
-					<a href="Java-程序基本结构.md"/>
-					<a href="Java注释、标识符命名规则及Java中的关键字.md"/>
-					<a href="Java常量.md"/>
-					<a href="Java数据类型.md"/>
-					<a href="Java变量.md"/>
-					<a href="Java运算符与表达式.md"/>
-					<a href="Java数据类型转换.md"/>
-					<a href="ASCII码表.md"/>
-					<a href="Java方法.md"/>
-					<a href="Java流程控制.md"/>
-					<a href="Java常用类.md"/>
-					<a href="Java面向对象.md"/>
-					<a href="Java集合.md"/>
-					<a href="Java数组.md"/>
-					<a href="IO流.md"/>
-					<a href="Java多线程.md"/>
-					<a href="Java泛型.md"/>
-					<a href="Java异常处理.md"/>
-					<a href="Java图形界面Swing框架.md"/>
-					<a href="参考.md"/>
-				</group>
-			</links>
-		</misc>
-	</section-starting-page>
+    <section-starting-page>
+        <misc>
+            <links>
+                <group>
+                    <a href="计算机基础知识.md"/>
+                    <a href="简介.md"/>
+                    <a href="Java环境搭建.md"/>
+                    <a href="工具.md"/>
+                    <a href="helloWorld.md"/>
+                    <a href="Java-程序基本结构.md"/>
+                    <a href="Java注释、标识符命名规则及Java中的关键字.md"/>
+                    <a href="Java常量.md"/>
+                    <a href="Java数据类型.md"/>
+                    <a href="Java变量.md"/>
+                    <a href="Java运算符与表达式.md"/>
+                    <a href="Java数据类型转换.md"/>
+                    <a href="ASCII码表.md"/>
+                    <a href="Java方法.md"/>
+                    <a href="Java流程控制.md"/>
+                    <a href="Java常用类.md"/>
+                    <a href="Java面向对象.md"/>
+                    <a href="Java集合.md"/>
+                    <a href="Java数组.md"/>
+                    <a href="IO流.md"/>
+                    <a href="Java多线程.md"/>
+                    <a href="Java泛型.md"/>
+                    <a href="Java异常处理.md"/>
+                    <a href="Java图形界面Swing框架.md"/>
+                    <a href="参考.md"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
 </topic>

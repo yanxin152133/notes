@@ -1,6 +1,9 @@
 # Jenkins流水线语法
+
 ## 声明式流水线
+
 声明式Pipleine是官方推荐的语法。所有的声明式Pipeline都必须包含一个 pipeline块中，比如：
+
 ```jenkinsfile
 pipeline {
     //run
@@ -8,11 +11,13 @@ pipeline {
 ```
 
 在声明式Pipeline中的基本语句和表达式遵循Groovy的语法。但是有以下例外：
+
 - 流水线顶层必须是一个块，特别是pipeline{}。
 - 不需要分号作为分割符，是按照行分割的。
 - 语句块只能由阶段、指令、步骤、赋值语句组成。例如: input被视为input()。
 
 ## agent代理
+
 `agent`指定了流水线的执行点。
 
 ```jenkinsfile
@@ -22,10 +27,12 @@ aget { label ' labelname '}
 ```
 
 参数：
+
 - any 在任何可用的节点上执行pipeline。none 没有指定agent的时候默认。
 - label 在指定标签上的节点上运行Pipeline。 node 允许额外的选项(自定义workspace)。
 
 ## post运行后处理
+
 当流水线完成后根据完成的状态做一些任务。比如：构建失败后邮件通知。
 
 ```jenkinsfile
@@ -41,6 +48,7 @@ post {
 ```
 
 常用的状态：
+
 - always 无论流水线或者阶段的完成状态。
 - changed 只有当流水线或者阶段完成状态与之前不同时。
 - failure 只有当流水线或者阶段状态为"failure"运行。
@@ -49,6 +57,7 @@ post {
 - aborted 只有当流水线或者阶段状态为"aborted "运行。例如：手动取消。
 
 ## stages阶段
+
 stages是流水线的整个运行阶段，包含一个或多个stage，建议stages至少包含一个stage。
 
 ```jenkinsfile
@@ -63,6 +72,7 @@ stages {
 ```
 
 ## environment环境变量
+
 定义流水线的环境变量，可以定义在全局变量或者步骤中的局部变量。这取决于 environment 指令在流水线内的位置。
 
 ```jenkinsfile
@@ -87,6 +97,7 @@ stages {
 ```
 
 ## options运行选项
+
 定义流水线运行时的配置选项，流水线提供了许多选项，比如buildDiscarder,但也可以由插件提供, 比如 timestamps。
 
 ```jenkinsfile
@@ -104,6 +115,7 @@ stages {
 ```
 
 其他部分参数：
+
 - buildDiscarder: 为最近的流水线运行的特定数量保存组件和控制台输出。
 - disableConcurrentBuilds: 不允许同时执行流水线。 可被用来防止同时访问共享资源等。
 - overrideIndexTriggers: 允许覆盖分支索引触发器的默认处理。
@@ -115,6 +127,7 @@ stages {
 - timestamps 预测所有由流水线生成的控制台输出，与该流水线发出的时间一致。
 
 ## parameters参数
+
 为流水线运行时设置项目相关的参数。
 
 ```jenkinsfile
@@ -140,6 +153,7 @@ stages {
 ```
 
 ## trigger触发器
+
 构建触发器
 
 ```jenkinsfile
@@ -167,7 +181,9 @@ stages {
 ```
 
 ## tool构建工具
-构建工具maven、ant、gradle,获取通过自动安装或手动放置工具的环境变量。支持maven/jdk/gradle。工具的名称必须在系统设置->全局工具配置中定义。
+
+构建工具maven、ant、gradle,获取通过自动安装或手动放置工具的环境变量。支持maven/jdk/gradle。工具的名称必须在系统设置->
+全局工具配置中定义。
 
 ```jenkinsfile
 agent any
@@ -184,6 +200,7 @@ stages {
 ```
 
 ## input交互输入
+
 input用户在执行各个阶段的时候，由人工确认是否继续进行。
 
 ```jenkinsfile
@@ -206,6 +223,7 @@ stages {
 ```
 
 参数解释：
+
 - message 呈现给用户的提示信息。
 - id 可选，默认为stage名称。
 - ok 默认表单上的ok文本。
@@ -214,6 +232,7 @@ stages {
 - parameters 提示提交者提供的一个可选的参数列表。
 
 ## when条件判断
+
 when 指令允许流水线根据给定的条件决定是否应该执行阶段。 when 指令必须包含至少一个条件。
 
 ```jenkinsfile
@@ -249,7 +268,10 @@ stage('Example Deploy') {
 ```
 
 ## paralle并行
-声明式流水线的阶段可以在他们内部声明多隔嵌套阶段, 它们将并行执行。 注意，一个阶段必须只有一个 steps 或 parallel的阶段。 嵌套阶段本身不能包含 进一步的 parallel 阶段, 但是其他的阶段的行为与任何其他 stageparallel 的阶段不能包含 agent 或 tools阶段, 因为他们没有相关 steps。
+
+声明式流水线的阶段可以在他们内部声明多隔嵌套阶段, 它们将并行执行。 注意，一个阶段必须只有一个 steps 或 parallel的阶段。
+嵌套阶段本身不能包含 进一步的 parallel 阶段, 但是其他的阶段的行为与任何其他 stageparallel 的阶段不能包含 agent 或
+tools阶段, 因为他们没有相关 steps。
 
 ```jenkinsfile
 stage('Parallel Stage') {
@@ -277,9 +299,11 @@ stage('Parallel Stage') {
     }
 }
 ```
+
 - failFast true 当其中一个进程失败时，强制所有的 parallel 阶段都被终止。
 
 ## script脚本标签
+
 可以通过此标签嵌入脚本式语法。
 
 ```jenkinsfile

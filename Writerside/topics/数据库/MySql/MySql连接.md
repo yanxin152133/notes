@@ -1,6 +1,7 @@
 # MySql连接
 
 ## Linux
+
 命令行登录：
 
 ```bash
@@ -38,6 +39,7 @@ mysql>
 ```
 
 格式如下：
+
 ```Bash
 mysql -u your_username -p
 参数说明：
@@ -48,4 +50,5 @@ mysql -h 主机名或IP地址 -P 端口号 -u 用户名 -p
 ```
 
 ## 数据库工具
+
 ![datagrip](./datagrip.png){ thumbnail="true" }

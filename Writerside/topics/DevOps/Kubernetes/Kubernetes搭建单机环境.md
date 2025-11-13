@@ -1,25 +1,33 @@
 # Kubernetes搭建单机环境
+
 ## 前提
+
 - 2 CPUs or more
 - 2GB of free memory
 - 20GB of free disk space
 - Internet connection
-- Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
+- Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or
+  VMware Fusion/Workstation
 
 ## Docker
+
 [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
 
 ## minikube
+
 ### 安装文档
+
 [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ### centos安装minikube
+
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
 ### 启动集群
+
 ```bash
 minikube start
 ```
@@ -54,7 +62,9 @@ minikube start
 ```
 
 ### 安装kubectl
+
 #### Add the Kubernetes yum repository
+
 ```bash
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -67,11 +77,13 @@ EOF
 ```
 
 #### Install kubectl using yum
+
 ```bash
 sudo yum install -y kubectl
 ```
 
 ### 命令补全
+
 ```bash
 sudo yum install -y bash-completion
 source /usr/share/bash-completion/bash_completion
@@ -80,6 +92,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
 ### 验证
+
 ```bash
 [centos@localhost ~]$ kubectl version 
 Client Version: v1.29.2
@@ -105,6 +118,7 @@ kube-system   storage-provisioner                1/1     Running   0          6m
 ```
 
 ### 停止集群
+
 ```bash
 [centos@localhost ~]$ minikube stop
 ✋  Stopping node "minikube"  ...
@@ -113,8 +127,11 @@ kube-system   storage-provisioner                1/1     Running   0          6m
 ```
 
 ### 问题
-#### ❗  You appear to be using a proxy, but your NO_PROXY environment does not include the minikube IP (192.168.49.2).
+
+#### ❗ You appear to be using a proxy, but your NO_PROXY environment does not include the minikube IP (192.168.49.2).
+
 ##### macOS and Linux
+
 ```bash
 export HTTP_PROXY=http://<proxy hostname:port>
 export HTTPS_PROXY=https://<proxy hostname:port>
@@ -124,6 +141,7 @@ minikube start
 ```
 
 ##### Windows
+
 ```bash
 set HTTP_PROXY=http://<proxy hostname:port>
 set HTTPS_PROXY=https://<proxy hostname:port>

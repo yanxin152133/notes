@@ -89,8 +89,8 @@ public class Demo2 {
 
 1. 多个case后面的数值不能重复
 2. switch后面的小括号当中只能是下列数据类型
-	1. 基本数据类型：byte/short/int/char
-	2. 引用数据类型：String字符串、enum枚举
+    1. 基本数据类型：byte/short/int/char
+    2. 引用数据类型：String字符串、enum枚举
 3. switch语句格式可以很灵活，前后顺序可以颠倒，而且break语句可以省略。匹配哪个case就从哪个位置向下执行，直到遇到了break或者整体结束为止。
 
 ## 循环结构

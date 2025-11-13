@@ -1,9 +1,11 @@
 # Docker 安装
+
 参考以下链接：    
 [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)     
-[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)     
+[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 ## Centos
+
 ### 设置开机启动Docker
 
 ```bash
@@ -21,12 +23,14 @@ source /usr/share/bash-completion/completions/docker
 ```
 
 ### 防火墙问题
+
 ```bash
 sudo firewall-cmd --zone=trusted --remove-interface=docker0 --permanent
 sudo firewall-cmd --reload
 ```
 
 ## 普通用户使用docker
+
 建立docker组:
 
 ```bash
@@ -42,18 +46,23 @@ sudo usermod -aG docker $USER
 退出重新登录即生效。
 
 ## 关于重新登录后该用户无法正常使用docker的问题
+
 ### 重启docker服务
+
 ```bash
 sudo service docker restart
 ```
 
 ### 切换当前会话到新group或者重启X会话
+
 ```bash
 newgrp - docker
 ```
 
 ## 更换第三方源和设置DNS
+
 加速镜像：
+
 - https://github.com/dongyubin/DockerHub
 - https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6
 
@@ -80,6 +89,7 @@ sudo vim /etc/docker/daemon.json
 然后重启Docker。
 
 ## 设置socks5
+
 参考链接：https://docs.docker.com/engine/daemon/proxy/
 
 新建文件`/etc/systemd/system/docker.service.d/proxy.conf`：

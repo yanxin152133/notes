@@ -1,10 +1,12 @@
 # Kubernetes搭建高可用环境
+
 - os：ubuntu-20.04.5
 - haproxy：HA-Proxy version 2.0.29-0ubuntu1 2022/08/26
 - keepalived：Keepalived v2.0.19 (10/19,2019)
 - Kubernetes：v1.26.0
 - 链接：[版本偏差策略](https://kubernetes.io/zh-cn/releases/version-skew-policy/)
-- 链接：[High Availability Considerations](https://github.com/kubernetes/kubeadm/blob/main/docs/ha-considerations.md#options-for-software-load-balancing)
+-
+链接：[High Availability Considerations](https://github.com/kubernetes/kubeadm/blob/main/docs/ha-considerations.md#options-for-software-load-balancing)
 
 |ip|角色|
 |::|::|
@@ -15,9 +17,11 @@
 |192.168.213.135|虚拟ip|
 
 ## 高可用部署方式
+
 链接：[利用 kubeadm 创建高可用集群](https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/high-availability/)
 
 ### 堆叠（Stacked）etcd 拓扑
+
 需要准备：
 
 + 配置满足`kubeadm 的最低要求`的三台机器作为控制面节点。控制平面节点为奇数有利于机器故障或者分区故障时重新选举。
@@ -33,6 +37,7 @@
 ![方式二](./方式2.png){ thumbnail="true" }
 
 ### 外部etcd拓扑
+
 需要准备：
 
 + 配置满足 kubeadm 的最低要求 的三台机器作为控制面节点。控制平面节点为奇数有利于机器故障或者分区故障时重新选举。
@@ -54,17 +59,21 @@
 ![方式一](./方式1.png){ thumbnail="true" }
 
 ## 安装docker
+
 [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 ## 设置网络
+
 Ubuntu 20.04 配置网络，默认使用`netplan`方式进行设置。
 
 netplan 方式的配置为`yaml`格式
+
 ```bash
 sudo vi /etc/netplan/00-installer-config.yaml
 ```
 
 编辑以下文件：
+
 ```yaml
 network:
   ethernets:
@@ -78,11 +87,13 @@ network:
 ```
 
 启动服务：
+
 ```bash
 sudo netplan apply
 ```
 
 查看状态：
+
 ```bash
 networkctl status
 ```
@@ -109,6 +120,7 @@ Jan 11 08:49:44 ubuntu systemd-networkd[809]: ens32: IPv6 successfully enabled
 ```
 
 ## 节点互信
+
 每个节点执行以下操作：
 
 ```bash
@@ -120,6 +132,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub ubuntu@192.168.213.134
 ```
 
 ## hostname
+
 编辑`/etc/hosts`：
 
 ```html
@@ -140,6 +153,7 @@ hostnamectl set-hostname node01
 ```
 
 ## 永久禁用swap
+
 编辑`/etc/fstab`文件，注释以下内容：
 
 ```
@@ -147,16 +161,23 @@ hostnamectl set-hostname node01
 ```
 
 ## 关闭防火墙
+
 ```bash
 sudo ufw disable
 ```
 
 ## 负载均衡
+
 ### keepalived 和 haproxy
-- haproxy：HAProxy是一个特别适用于高可用性环境的TCP/HTTP开源的反向代理和负载均衡软件。在7层负载均衡方面的功能很强大(支持cookie track, header rewrite等等)，支持双机热备，支持虚拟主机，支持健康检查，同时还提供直观的监控页面，可以清晰实时的监控服务集群的运行状况。同时支持Linux 2.6内核中System Epoll，通过简化系统调用，大幅的提高了网络I/O性能。
-- keepalived：keepalived是集群管理中保证集群高可用的一个服务软件，用来防止单点故障。keepalived是以VRRP协议为实现基础的，VRRP全称Virtual Router Redundancy Protocol，即虚拟路由冗余协议。（云服务器不支持VRRP）
+
+- haproxy：HAProxy是一个特别适用于高可用性环境的TCP/HTTP开源的反向代理和负载均衡软件。在7层负载均衡方面的功能很强大(
+  支持cookie track, header rewrite等等)，支持双机热备，支持虚拟主机，支持健康检查，同时还提供直观的监控页面，可以清晰实时的监控服务集群的运行状况。同时支持Linux
+  2.6内核中System Epoll，通过简化系统调用，大幅的提高了网络I/O性能。
+- keepalived：keepalived是集群管理中保证集群高可用的一个服务软件，用来防止单点故障。keepalived是以VRRP协议为实现基础的，VRRP全称Virtual
+  Router Redundancy Protocol，即虚拟路由冗余协议。（云服务器不支持VRRP）
 
 ### 安装
+
 节点`master01`、`master02`、`master03`执行以下命令：
 
 ```bash
@@ -164,7 +185,9 @@ sudo apt install keepalived haproxy
 ```
 
 ### 配置
+
 #### haproxy
+
 `sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup`进行备份。
 
 节点`master01`、`master02`、`master03`编辑`/etc/haproxy/haproxy.cfg`:
@@ -234,7 +257,9 @@ backend apiserver
 ```
 
 #### keepalived
+
 ##### keepalived.conf
+
 节点`master01`编辑`/etc/keepalived/keepalived.conf`:
 
 ```cfg
@@ -341,6 +366,7 @@ vrrp_instance VI_1 {
 ```
 
 ##### check_apiserver.sh
+
 健康检查脚本`/etc/keepalived/check_apiserver.sh`：
 
 ```sh
@@ -360,12 +386,14 @@ fi
 节点`master01`、`master02`、`master03`运行`sudo chmod u+x /etc/keepalived/check_apiserver.sh` 设置脚本运行权限。
 
 ### 启动并设置开机自动启动
+
 ```bash
 sudo systemctl enable --now keepalived haproxy
 sudo systemctl status keepalived haproxy
 ```
 
 结果如下：
+
 ```bash
 ubuntu@master01:/etc/keepalived$ sudo systemctl status keepalived haproxy
 ● keepalived.service - Keepalive Daemon (LVS and VRRP)
@@ -431,27 +459,32 @@ PING 192.168.231.135 (192.168.231.135) 56(84) bytes of data.
 ```
 
 ## 安装kubeadm、kubelet和kubectl
+
 - kubeadm：用来初始化集群的指令。
 - kubelet：在集群中的每个节点上用来启动 Pod 和容器等。
 - kubectl：用来与集群通信的命令行工具。
 
 更新`apt`包索引并安装使用`Kubernetes apt`仓库所需要的包：
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
 ```
 
 下载 Google Cloud 公开签名秘钥：
+
 ```bash
 sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 
 添加 Kubernetes `apt` 仓库：
+
 ```bash
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 更新`apt`包索引，安装 `kubelet、kubeadm 和 kubectl`，并锁定其版本：
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
@@ -460,6 +493,7 @@ sudo systemctl enable kubelet
 ```
 
 国内源：
+
 ```bash
 apt-get update && apt-get install -y apt-transport-https
 curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | apt-key add - 
@@ -471,16 +505,20 @@ apt-get install -y kubelet kubeadm kubectl
 ```
 
 ## 使用配置文件初始化
+
 链接：[结合一份配置文件来使用 kubeadm init](https://kubernetes.io/zh-cn/docs/reference/setup-tools/kubeadm/kubeadm-init/#config-file)
 
 ### 生成kubeadm默认配置文件
+
 在`master01`节点上执行：
+
 ```bash
 kubeadm config print init-defaults --component-configs \
 KubeProxyConfiguration,KubeletConfiguration > kubeadm-config.yaml
 ```
 
 ### 修改配置文件`kubeadm-config.yaml`
+
 ```yaml
 apiVersion: kubeadm.k8s.io/v1beta3
 bootstrapTokens:
@@ -622,7 +660,9 @@ volumeStatsAggPeriod: 0s
 ```
 
 ### 初始化集群
+
 在`master01`节点上执行：
+
 ```bash
 sudo kubeadm init --config kubeadm-config.yaml --upload-certs
 
@@ -631,6 +671,7 @@ sudo kubeadm init --config kubeadm-config.yaml --upload-certs
 ```
 
 初始化成功的信息如下：
+
 ```bash
 ubuntu@master01:~$ sudo kubeadm init --config kubeadm-config.yaml --upload-certs
 [init] Using Kubernetes version: v1.26.0
@@ -723,6 +764,7 @@ kubeadm join 192.168.213.135:8443 --token abcdef.0123456789abcdef \
 ```
 
 执行以下命令：
+
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -730,7 +772,9 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 #### 出错
+
 ##### [ERROR CRI]: container runtime is not running
+
 ```bash
 ubuntu@master01:~$ sudo kubeadm init --config kubeadm-config.yaml --upload-certs
 [init] Using Kubernetes version: v1.26.0
@@ -744,12 +788,14 @@ To see the stack trace of this error execute with --v=5 or higher
 ```
 
 解决方法：
+
 ```bash
 sudo rm -rf /etc/containerd/config.toml
 sudo systemctl restart containerd
 ```
 
 ##### error execution phase preflight: [preflight] Some fatal errors occurred:
+
 ```bash
 [init] Using Kubernetes version: v1.26.0
 [preflight] Running pre-flight checks
@@ -766,17 +812,21 @@ To see the stack trace of this error execute with --v=5 or higher
 ```
 
 解决办法：
+
 ```bash
 sudo kubeadm reset
 ```
 
 ## 安装 Pod 网络附加组件
+
 1. 下载flannel资源配置文件
+
 ```bash
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 2. 修改`kube-flannel.yml`
+
 ```yaml
 # 修改pod网络和网络模式
   net-conf.json: |
@@ -789,11 +839,13 @@ wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-
 ```
 
 3. 部署
+
 ```bash
 kubectl apply -f kube-flannel.yml
 ```
 
 4. 验证
+
 ```bash
 ubuntu@master01:~$ kubectl get pods --all-namespaces
 NAMESPACE      NAME                               READY   STATUS    RESTARTS   AGE
@@ -811,6 +863,7 @@ master01   Ready    control-plane   35m   v1.26.0          #目前节点状态�
 ```
 
 ## 加入节点
+
 ```bash
 # master02节点
 sudo kubeadm reset
@@ -839,6 +892,7 @@ sudo kubeadm join 192.168.213.135:8443 --token abcdef.0123456789abcdef \
 ```
 
 查看集群所有节点信息：
+
 ```bash
 ubuntu@master01:~$ kubectl get pods --all-namespaces
 NAMESPACE      NAME                               READY   STATUS    RESTARTS         AGE
@@ -873,6 +927,7 @@ node01     Ready    <none>          26m   v1.26.0
 ```
 
 ## 测试
+
 ```bash
 ubuntu@master01:~$ kubectl create deployment nginx --image=nginx
 deployment.apps/nginx created
@@ -888,6 +943,7 @@ service/nginx        NodePort    10.110.49.104   <none>        80:32201/TCP   16
 ```
 
 结果如下：
+
 ```bash
 ubuntu@master01:~$ curl 10.110.49.104
 <!DOCTYPE html>
@@ -918,12 +974,15 @@ Commercial support is available at
 ![结果](./image_2023-01-13_04-37-49.png){ thumbnail="true" }
 
 ## 安装 Dashboard 插件
+
 ### 下载清单文件
+
 ```bash
 wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
 ```
 
 ### 修改recommended.yaml
+
 ```yaml
 # Copyright 2017 The Kubernetes Authors.
 #
@@ -1014,12 +1073,14 @@ spec:
 ```
 
 ### 部署
+
 ```bash
 kubectl create secret generic kubernetes-dashboard-certs --from-file=$HOME/certs -n kubernetes-dashboard
 kubectl create -f recommended.yaml
 ```
 
 ### 生成证书
+
 ```bash
 openssl genrsa -des3 -passout pass:over4chars -out dashboard.pass.key 2048
 openssl rsa -passin pass:over4chars -in dashboard.pass.key -out dashboard.key
@@ -1031,6 +1092,7 @@ openssl x509 -req -sha256 -days 365 -in dashboard.csr -signkey dashboard.key -ou
 将生成的`dashboard.key`和`dashboard.crt` 改为`tls.key`和`tls.crt`，并移动到`$HOME/certs`路径下。
 
 ### token
+
 ```bash
 tee dashboard-admin.yaml<<EOF
 ---
@@ -1063,12 +1125,14 @@ kubectl create -f dashboard-admin.yaml
 ```
 
 生成token:
+
 ```bash
 ubuntu@master01:~$ kubectl -n kubernetes-dashboard create token dashboard-admin
 eyJhbGciOiJSUzI1NiIsImtpZCI6ImYtU3k5a3Joa0p1ZktyVDU4RjFfZEJ2MUJFbllBU252YlM0WF8xSXhPOWcifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjczNTcyOTU0LCJpYXQiOjE2NzM1NjkzNTQsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJkYXNoYm9hcmQtYWRtaW4iLCJ1aWQiOiIyMWJmMDhjNi05Njg0LTQzN2UtOGY3Mi1jZDVkMGUyZGViMzAifX0sIm5iZiI6MTY3MzU2OTM1NCwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50Omt1YmVybmV0ZXMtZGFzaGJvYXJkOmRhc2hib2FyZC1hZG1pbiJ9.bJcya-Zw7uEtzwD_tk_LtKXLB8wtWO20dpy29P-Y0GQQpBGhvaxZ_ss5kqcIWceHGWWHnnnMmPsXLc35zAv4CbPcFs5e4wL07RlNsW6ijhNAPVH5Yy6RdTFcwmfuoUkd5cZbTIIzWbSwLiLMOZ7t5B-SsXjKtvPZIJ1IsbK07dpzNLqV_vDoNH6WsAukocrmYOjY-SgWON7K-fsu5NxYqaeUllxqPARsepVnoiVsltONvVP2x5Id6MQRlqtQgMZ7uvy_KOuG8C3KzMWO4z6uU-EtdW0Vo7HL6iKPz592dg_jWedlTV2eMAReVD2kvmOu8vWjillMi1tI09vudZ-xWg
 ```
 
 ### 结果
+
 ```bash
 ubuntu@master01:~$ kubectl get service -A
 NAMESPACE              NAME                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
