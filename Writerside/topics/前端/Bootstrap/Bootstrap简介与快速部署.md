@@ -46,3 +46,42 @@ Bootstrap是一个功能强大、功能丰富的前端工具。在几分钟内�
 </body>
 </html>
 ```
+
+### 下载离线文件
+
+#### 编译CSS和JS
+
+[Bootstrap v5.3.7 的即用型编译代码](https://bootstrap.nodejs.cn/docs/5.3/getting-started/download/#)
+
+#### 源文件
+
+[源 Sass、JavaScript 和文档文件](https://bootstrap.nodejs.cn/docs/5.3/getting-started/download/#)
+
+#### 下载示例
+
+[Examples](https://github.com/twbs/bootstrap/releases/download/v5.3.7/bootstrap-5.3.7-examples.zip)
+
+### 包管理器
+
+#### npm
+
+使用npm包在Node.js支持的应用中安装Bootstrap:
+
+```bash
+npm install bootstrap@5.3.7
+```
+
+#### yarn
+
+使用yarn包在Node.js支持的应用中安装Bootstrap：
+
+```Bash
+yarn add bootstrap@5.3.7
+```
+
+## 插件扩展
+
+![IntelliSense扩展](https://bootstrap.nodejs.cn/docs/5.3/assets/img/bootstrap-intellisense-autocomplete.png){
+thumbnail="true" }
+
+[IntelliSense扩展下载](https://marketplace.visualstudio.com/items?itemName=hossaini.bootstrap-intellisense)
