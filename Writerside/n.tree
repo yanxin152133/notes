@@ -36,7 +36,13 @@
                 <toc-element topic="Java图形界面Swing框架.md"/>
                 <toc-element topic="参考.md"/>
             </toc-element>
-            <toc-element topic="Spring-Boot.topic"/>
+            <toc-element topic="Spring-Boot.topic">
+                <toc-element topic="认识Spring-Boot.topic"/>
+                <toc-element topic="Spring-IoC.topic"/>
+                <toc-element topic="Spring-AOP.topic"/>
+                <toc-element topic="Spring-MVC.topic"/>
+                <toc-element topic="Spring-JDBC.topic"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="Python.topic">
             <toc-element topic="python搭建环境.md"/>
