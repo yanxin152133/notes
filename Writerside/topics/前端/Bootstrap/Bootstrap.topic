@@ -10,6 +10,7 @@
             <links>
                 <group>
                     <a href="Bootstrap简介与快速部署.md"/>
+                    <a href="Bootstrap布局.md"/>
                 </group>
             </links>
         </misc>
