@@ -65,8 +65,10 @@
     </toc-element>
     <toc-element topic="前端.topic">
         <toc-element topic="Bootstrap.topic">
-            <toc-element topic="Bootstrap布局.md"/>
             <toc-element topic="Bootstrap简介与快速部署.md"/>
+            <toc-element toc-title="Bootstrap布局">
+                <toc-element topic="Bootstrap容器.md"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="Vue.topic">
             <toc-element topic="Vue-CLI介绍.md"/>

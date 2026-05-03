@@ -1,4 +1,6 @@
-# Bootstrap布局
+# Bootstrap 容器
+`当前版本: Bootstrap v5`
+
 ## Container容器
 - Container是Bootstrap中最基本的布局元素，在使用默认网格系统时必不可少。
 - 容器用于容纳、填充内容，有时还能使内容剧中。虽然容易可以嵌套，但大多数布局并不需要嵌套容器。
@@ -19,3 +21,51 @@ Bootstrap提供了三种不同的容器：
 | .container-xl    | 100%       | 100%      | 100%       | 100%      | 1140px      | 1320px      |
 | .container-fluid | 100%       | 100%      | 100%       | 100%      | 100%        | 100%        |
 
+## 默认容器
+`.container` class 是一个默认的响应式、固定宽度的容器，其`max-width`会在每个断点处发生变化。可以用其作为整个DIV的最外层容器，如下：
+
+```HTML
+<div class="container">
+  <!-- 网页内容写在这里面 -->
+</div>
+```
+
+## 流式布局
+`.container-fluid`支持全屏的流式布局，如下：
+
+```HTML
+<div class="container-fluid">
+  ...
+</div>
+```
+
+## Sass
+如上所示，Bootstrap 生成了一系列预定义的容器类（container classes），旨在帮助您构建所需的布局。
+可以通过修改驱动这些类的 Sass 映射（Sass map，位于 _variables.scss 文件中）来对其进行自定义：
+
+```HTML
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+```
+
+除了自定义 Sass 之外，还可以使用 Sass mixin 创建自己的容器。
+```HTML
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Usage
+.custom-container {
+  @include make-container();
+}
+```
