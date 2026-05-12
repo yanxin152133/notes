@@ -1,13 +1,29 @@
 # pip
 
-## 确定哪个pip是哪个Python
+## 检查
+检查是否已安装并正常运行python，并且安装了pip。通过以下方式进行检查：
 
 ```bash
-C:\Users\Razer>pip -V
-pip 24.0 from C:\Users\Razer\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
+## Linux
+python --version
+Python 3.N.N
+python -m pip --version
+pip X.Y.Z from ... (python 3.N.N)
+
+## macOS 可能提示command not found: python，可替换成 python3
+python --version
+Python 3.N.N
+python -m pip --version
+pip X.Y.Z from ... (python 3.N.N)
+
+## windows
+C:> py --version
+Python 3.N.N
+C:> py -m pip --version
+pip X.Y.Z from ... (python 3.N.N)
 ```
 
-## 安装pip
+## 安装pip软件包
 
 - 使用easy_install安装： 各种进入到`easy_install`脚本的目录下，然后运行`easy_inatall pip`
 - 使用get-pip.py安装： 在下面的url下载get-pip.py脚本 `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` 然后运行：
