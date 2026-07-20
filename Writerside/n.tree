@@ -98,6 +98,9 @@
         </toc-element>
     </toc-element>
     <toc-element topic="自动化测试.topic">
+        <toc-element topic="pytest.topic">
+            <toc-element topic="pytest简介.md"/>
+        </toc-element>
         <toc-element topic="Selenium.topic">
             <toc-element topic="Selenium简介.md"/>
         </toc-element>
