@@ -7,6 +7,13 @@
                  start-page="Home.topic">
 
     <toc-element topic="Home.topic"/>
+    <toc-element topic="AI.topic">
+        <toc-element topic="AI工作流.topic">
+            <toc-element topic="n8n.topic">
+                <toc-element topic="部署n8n.md"/>
+            </toc-element>
+        </toc-element>
+    </toc-element>
     <toc-element topic="后端.topic">
         <toc-element topic="Java.topic">
             <toc-element topic="Java入门.topic">
