@@ -106,6 +106,13 @@
     </toc-element>
     <toc-element topic="自动化测试.topic">
         <toc-element topic="pytest.topic">
+            <toc-element topic="在测试中使用临时目录和文件.md"/>
+            <toc-element topic="使用子测试.md"/>
+            <toc-element topic="参数化fixtures和测试函数.md"/>
+            <toc-element topic="用属性标记测试函数.md"/>
+            <toc-element topic="使用fixtures.md"/>
+            <toc-element topic="在测试中编写和报告断言.md"/>
+            <toc-element topic="调用pytest.md"/>
             <toc-element topic="pytest简介.md"/>
             <toc-element topic="pytest入门.md"/>
         </toc-element>
