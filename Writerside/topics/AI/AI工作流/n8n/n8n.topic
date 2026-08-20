@@ -10,6 +10,7 @@
             <links>
                 <group>
                     <a href="部署n8n.md"/>
+                    <a href="了解工作流程.md"/>
                 </group>
             </links>
         </misc>

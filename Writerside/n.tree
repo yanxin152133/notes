@@ -11,6 +11,7 @@
         <toc-element topic="AI工作流.topic">
             <toc-element topic="n8n.topic">
                 <toc-element topic="部署n8n.md"/>
+                <toc-element topic="了解工作流程.md"/>
             </toc-element>
         </toc-element>
     </toc-element>

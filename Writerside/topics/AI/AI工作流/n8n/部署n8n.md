@@ -18,7 +18,7 @@ docker run -it \
 
 访问路径：http://localhost:5678/setup
 
-![n8n访问页面](./n8n访问页面.png){ thumbnail="true" }
+![n8n访问页面](img/n8n访问页面.png){ thumbnail="true" }
 
 ## 使用npm安装
 
