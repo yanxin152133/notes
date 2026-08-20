@@ -1,4 +1,5 @@
 # Jenkins流水线语法
+<show-structure for="chapter,procedure"/>
 
 ## 声明式流水线
 

@@ -1,4 +1,5 @@
 # python流程控制
+<show-structure for="chapter,procedure"/>
 
 ## 顺序执行
 

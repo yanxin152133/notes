@@ -1,4 +1,6 @@
 # Bootstrap 容器
+<show-structure for="chapter,procedure"/>
+
 `当前版本: Bootstrap v5`
 
 ## Container容器

@@ -1,4 +1,5 @@
 # Jenkins搭建环境
+<show-structure for="chapter,procedure"/>
 
 链接：[Jenkins](https://www.jenkins.io/zh/doc/tutorials/)
 

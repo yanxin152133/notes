@@ -1,4 +1,5 @@
 # MySql连接
+<show-structure for="chapter,procedure"/>
 
 ## Linux
 

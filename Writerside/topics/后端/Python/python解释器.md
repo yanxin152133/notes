@@ -1,4 +1,5 @@
 # python解释器
+<show-structure for="chapter,procedure"/>
 
 ## 种类
 

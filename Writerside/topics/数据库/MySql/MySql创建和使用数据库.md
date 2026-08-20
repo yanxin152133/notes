@@ -1,4 +1,5 @@
 # MySql创建和使用数据库
+<show-structure for="chapter,procedure"/>
 
 ## 创建和选择数据库
 

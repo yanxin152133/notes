@@ -1,4 +1,5 @@
 # Bootstrap简介与快速部署
+<show-structure for="chapter,procedure"/>
 
 ## 简介
 

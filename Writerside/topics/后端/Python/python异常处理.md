@@ -1,4 +1,5 @@
 # python异常处理
+<show-structure for="chapter,procedure"/>
 
 异常即是一个事件，该事件会在程序执行过程中发生，影响了程序的正常执行。    
 一般情况下，在Python无法正常处理程序时就会发生一个异常。    

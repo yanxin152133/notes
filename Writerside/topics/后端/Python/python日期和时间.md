@@ -1,4 +1,5 @@
 # python日期和时间
+<show-structure for="chapter,procedure"/>
 
 python 中 time和calsendar模块用于格式化日期和时间。    
 时间间隔是以秒为单位的浮点小数。    

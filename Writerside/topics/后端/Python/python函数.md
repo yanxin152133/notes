@@ -1,4 +1,5 @@
 # python函数
+<show-structure for="chapter,procedure"/>
 
 函数是组织好的，可重复使用的，用来实现单一或相关关联功能的代码段。函数能提高应用的模块性和代码的重复利用率。
 

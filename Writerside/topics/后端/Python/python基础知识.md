@@ -1,4 +1,5 @@
 # python基础知识
+<show-structure for="chapter,procedure"/>
 
 ## 基础语法
 

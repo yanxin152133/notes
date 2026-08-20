@@ -1,4 +1,5 @@
 # Git
+<show-structure for="chapter,procedure"/>
 
 ## 简介
 

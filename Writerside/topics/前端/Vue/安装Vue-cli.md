@@ -1,4 +1,5 @@
 # 安装Vue-cli
+<show-structure for="chapter,procedure"/>
 
 ## node.js
 

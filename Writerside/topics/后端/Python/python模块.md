@@ -1,4 +1,5 @@
 # python模块
+<show-structure for="chapter,procedure"/>
 
 模块（Moudule）是一个python文件，以.py结尾，包含了python对象定义和python语句。    
 模块能让你能够有逻辑地组织你的python代码段。    

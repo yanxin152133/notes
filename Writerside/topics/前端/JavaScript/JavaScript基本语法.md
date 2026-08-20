@@ -1,4 +1,5 @@
 # JavaScript基本语法
+<show-structure for="chapter,procedure"/>
 
 ## 语句
 

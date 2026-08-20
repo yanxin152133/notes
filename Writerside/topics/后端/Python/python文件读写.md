@@ -1,4 +1,5 @@
 # python文件读写
+<show-structure for="chapter,procedure"/>
 
 ## open()方法
 

@@ -1,4 +1,6 @@
 # Docker 安装
+<show-structure for="chapter,procedure"/>
+
 
 参考以下链接：    
 [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)     

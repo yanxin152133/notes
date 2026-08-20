@@ -1,4 +1,5 @@
 # TypeScript 变量声明
+<show-structure for="chapter,procedure"/>
 
 ## TypeScript 命名规则
 

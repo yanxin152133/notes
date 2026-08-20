@@ -1,4 +1,5 @@
 # Kubernetes搭建单机环境
+<show-structure for="chapter,procedure"/>
 
 ## 前提
 

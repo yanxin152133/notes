@@ -1,4 +1,5 @@
 # pytest简介
+<show-structure for="chapter,procedure"/>
 
 ## 简介
 

@@ -1,4 +1,5 @@
 # Kubernetes搭建高可用环境
+<show-structure for="chapter,procedure"/>
 
 - os：ubuntu-20.04.5
 - haproxy：HA-Proxy version 2.0.29-0ubuntu1 2022/08/26

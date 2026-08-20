@@ -1,4 +1,5 @@
 # pip
+<show-structure for="chapter,procedure"/>
 
 ## 检查
 检查是否已安装并正常运行python，并且安装了pip。通过以下方式进行检查：

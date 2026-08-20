@@ -1,4 +1,5 @@
 # Vue-CLI 介绍
+<show-structure for="chapter,procedure"/>
 
 ## 介绍
 

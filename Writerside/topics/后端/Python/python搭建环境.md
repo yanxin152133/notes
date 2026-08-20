@@ -1,4 +1,5 @@
 # python搭建环境
+<show-structure for="chapter,procedure"/>
 
 ## Windows
 

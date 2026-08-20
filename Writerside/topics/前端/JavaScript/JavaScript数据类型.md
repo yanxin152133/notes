@@ -1,4 +1,5 @@
 # JavaScript数据类型
+<show-structure for="chapter,procedure"/>
 
 JavaScript的数据类型共有六种。
 

@@ -1,4 +1,5 @@
 # MySql简介
+<show-structure for="chapter,procedure"/>
 
 ## 环境
 

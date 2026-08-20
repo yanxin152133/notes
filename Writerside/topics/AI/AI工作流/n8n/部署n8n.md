@@ -1,4 +1,5 @@
 # 部署n8n
+<show-structure for="chapter,procedure"/>
 
 ## docker
 

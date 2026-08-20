@@ -1,4 +1,5 @@
 # python面向对象
+<show-structure for="chapter,procedure"/>
 
 ## 概念及术语
 

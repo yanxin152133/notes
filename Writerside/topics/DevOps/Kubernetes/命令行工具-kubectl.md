@@ -1,4 +1,5 @@
 # 命令行工具 (Kubectl)
+<show-structure for="chapter,procedure"/>
 
 Kubectl 是使用 Kubernetes API 与 Kubernetes 集群的控制面进行通信的命令行工具。
 

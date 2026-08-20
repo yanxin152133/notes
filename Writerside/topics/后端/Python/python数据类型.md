@@ -1,4 +1,5 @@
 # python数据类型
+<show-structure for="chapter,procedure"/>
 
 Python 有五个标准的数据类型：
 

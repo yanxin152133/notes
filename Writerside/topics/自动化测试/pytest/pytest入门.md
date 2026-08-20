@@ -1,4 +1,5 @@
 # pytest入门
+<show-structure for="chapter,procedure"/>
 
 ## 安装pytest
 

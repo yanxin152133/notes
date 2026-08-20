@@ -1,4 +1,5 @@
 # any 类型，unknown 类型，never 类型
+<show-structure for="chapter,procedure"/>
 
 ## any类型
 
