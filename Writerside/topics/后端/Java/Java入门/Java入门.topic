@@ -15,7 +15,9 @@
                     <a href="工具.md"/>
                     <a href="helloWorld.md"/>
                     <a href="Java-程序基本结构.md"/>
-                    <a href="Java注释、标识符命名规则及Java中的关键字.md"/>
+                    <a href="Java注释.md"/>
+                    <a href="Java标识符.md"/>
+                    <a href="Java关键字和保留字.md"/>
                     <a href="Java常量.md"/>
                     <a href="Java数据类型.md"/>
                     <a href="Java变量.md"/>
