@@ -41,7 +41,7 @@ public class Hello { // 类型是Hello
 
 ```Java
 /**
- *  特殊的多行注释
+ *  文档注释
  */
 
 // 单行注释
