@@ -11,7 +11,7 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside/hi'
+  INSTANCE: 'Writerside/n'
   DOCKER_VERSION: 'latest'
   # IS_GROUP: 'true'  # Uncomment to build a group
 
