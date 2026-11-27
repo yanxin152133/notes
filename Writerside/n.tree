@@ -26,10 +26,10 @@
             <toc-element topic="Java标识符.md"/>
             <toc-element topic="Java关键字和保留字.md"/>
             <toc-element topic="Java常量.md"/>
-            <toc-element topic="Java数据类型.md"/>
             <toc-element topic="Java变量.md"/>
-            <toc-element topic="Java运算符与表达式.md"/>
+            <toc-element topic="Java数据类型.md"/>
             <toc-element topic="Java数据类型转换.md"/>
+            <toc-element topic="Java运算符与表达式.md"/>
             <toc-element topic="ASCII码表.md"/>
             <toc-element topic="Java方法.md"/>
             <toc-element topic="Java流程控制.md"/>

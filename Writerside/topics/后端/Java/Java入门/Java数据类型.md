@@ -1,6 +1,15 @@
 # Java数据类型
 
 ## 数据类型分类
+Java 中的数据类型可分为 2 种：
+
+1）基本数据类型。
+
+基本数据类型是 Java 语言操作数据的基础，包括 boolean、char、byte、short、int、long、float 和 double，共 8 种。
+
+2）引用数据类型。
+
+除了基本数据类型以外的类型，就是引用类型。常见的有数组、class以及接口。
 
 ![java数据类型分类](https://live.staticflickr.com/65535/48287266636_32ed239f62_z.jpg)
 
@@ -15,7 +24,7 @@
 | 3  | int(整型)   | 32   | -2<sup>31</sup>到（2<sup>31</sup>-1） |
 | 4  | long(长整型) | 64   | -2<sup>63</sup>到（2<sup>63</sup>-1） |
 
-#### demo
+#### 代码演示
 
 ```java
 package com.java.chap03;
@@ -66,7 +75,7 @@ public class Demo1 {
 
 > 对于`float`类型，需要加上`f`后缀。
 
-#### demo
+#### 代码演示
 
 ```java
 package com.java.chap03;
@@ -113,7 +122,7 @@ public class Demo2 {
 
 > `char`类型使用`单引号`，且仅有一个字符要和`双引号"`的字符串类型区分开。
 
-#### demo
+#### 代码演示
 
 ```java
 package com.java.chap03;
@@ -149,7 +158,7 @@ public class Demo3 {
 
 > Java语言对布尔类型的存储并没有做规定，因为理论上存储布尔类型只需要1 bit，但是通常JVM内部会把boolean表示为4字节整数。
 
-#### demo
+#### 代码演示
 
 ```java
 package com.java.chap03;
